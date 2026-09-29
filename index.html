@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafty | Creative Personal Portfolio — Jessy Linda</title>
+  <meta name="description" content="Personal portfolio of Jessy Linda — 7+ Years of Expertise, Award-Winning Creative Designer in California, USA specializing in Branding, Product UI/UX & Design.">
+  <meta name="keywords" content="Jessy Linda, Personal Portfolio, UI/UX Designer, Branding, Product Design, Graphic Design, Web Design, Grafty">
+  <meta property="og:title" content="Grafty | Creative Personal Portfolio — Jessy Linda">
+  <meta property="og:description" content="Personal portfolio of Jessy Linda — Branding, Product UI/UX & Design.">
+  <meta property="og:image" content="assets/hero-woman.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Anton for condensed bold display + Plus Jakarta Sans for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <nav class="nav-links" id="main-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-brand">
+        <a href="#top" class="brand-logo" aria-label="Grafty Homepage">
+          <img src="assets/logo.png" alt="grafty" class="logo-img">
+        </a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="social-icons">
+          <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Dribbble">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+              <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+              <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m1.37 9.74v-8.37H5.1v8.37h2.73z"/>
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+
+        <a href="#contact" class="btn-hire" id="btn-hire-nav">Hire Me!</a>
+
+        <!-- Mobile hamburger toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="#feedback" class="mobile-nav-link">Feedback</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <div class="mobile-drawer-footer">
+        <a href="#contact" class="btn-hire btn-hire-mobile">Hire Me!</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section-hero" id="hero">
+      <!-- Watermark Background Text -->
+      <div class="watermark watermark-hero" aria-hidden="true">DESIGNER</div>
+
+      <div class="hero-content-wrapper">
+        <!-- Center Visual Portrait -->
+        <div class="hero-centerpiece">
+          <div class="hero-arch-container">
+            <!-- Floating Black Badges -->
+            <div class="hero-badge badge-branding" id="badge-branding">Branding</div>
+            <div class="hero-badge badge-designer" id="badge-designer">Desinger</div>
+
+            <!-- Neon Purple Signature Script Overlay -->
+            <div class="hero-signature-wrapper" aria-hidden="true">
+              <img src="assets/hero-signature.png" alt="" class="hero-signature-img">
+            </div>
+
+            <img src="assets/hero-woman.jpg" alt="Jessy Linda - Creative Designer" class="hero-portrait-img">
+          </div>
+        </div>
+
+        <!-- Left Typography -->
+        <div class="hero-left-col">
+          <p class="hero-greeting">Hi 👋, I'm <span class="name-bold">Jessy Linda</span></p>
+          <h1 class="hero-headline">
+            BRANDING,<br>
+            PRODUCT UI/UX<br>
+            & DESIGN.
+          </h1>
+        </div>
+
+        <!-- Right Floating Card -->
+        <div class="hero-right-col">
+          <div class="hero-info-card">
+            <p class="card-desc">
+              7+ Years of Expertise, Award-Winning Creative Designer in California, USA.
+            </p>
+            <a href="mailto:hello@linda.com" class="card-email">hello@linda.com</a>
+
+            <!-- Scalloped Discuss Badge Button (SVG) -->
+            <a href="#contact" class="starburst-badge discuss-badge" aria-label="Let's Discuss">
+              <img src="assets/badge-discuss.svg" alt="Let's Discuss ↗" class="discuss-badge-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section-services" id="services">
+      <div class="services-header-row">
+        <div class="watermark watermark-services" aria-hidden="true">SERVICE</div>
+        <div class="section-tag-right">
+          <span class="tag-text">SERVICES</span>
+          <span class="tag-orange-bar" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="services-accordion-list">
+        <!-- Service Item 1: BRANDING -->
+        <div class="service-card" data-service="1">
+          <button class="service-trigger" aria-expanded="false" aria-controls="service-content-1">
+            <span class="service-title">BRANDING</span>
+            <span class="service-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="service-content" id="service-content-1">
+            <p class="service-description">
+              Comprehensive brand positioning, distinctive visual identities, bespoke typography, logo systems, and brand guidelines engineered to leave a lasting global impact.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Item 2: DESIGN (Expanded by default as in reference) -->
+        <div class="service-card active" data-service="2">
+          <button class="service-trigger" aria-expanded="true" aria-controls="service-content-2">
+            <span class="service-title">DESIGN</span>
+            <span class="service-icon" aria-hidden="true">—</span>
+          </button>
+          <div class="service-content" id="service-content-2" style="max-height: 200px;">
+            <p class="service-description">
+              Efficient, knowledgeable, & smooth experience. Highly recommended
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Item 3: MARKETING -->
+        <div class="service-card" data-service="3">
+          <button class="service-trigger" aria-expanded="false" aria-controls="service-content-3">
+            <span class="service-title">MARKETING</span>
+            <span class="service-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="service-content" id="service-content-3">
+            <p class="service-description">
+              High-converting digital campaign creatives, bespoke social assets, interactive landing pages, and pitch decks crafted to drive user acquisition and engagement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Item 4: CODE -->
+        <div class="service-card" data-service="4">
+          <button class="service-trigger" aria-expanded="false" aria-controls="service-content-4">
+            <span class="service-title">CODE</span>
+            <span class="service-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="service-content" id="service-content-4">
+            <p class="service-description">
+              Pixel-perfect frontend architecture, responsive interactive experiences, silky smooth micro-animations, and clean, accessible, modern web solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME & STATS SECTION -->
+    <section class="section-about" id="about">
+      <div class="about-container">
+        <!-- Top Pill Badge -->
+        <div class="about-pill-badge">ABOUT ME</div>
+
+        <!-- Headline -->
+        <h2 class="about-headline">
+          UI/UX DESIGNER CRAFTING INTUITIVE, USER-<br>
+          FRIENDLY EXPERIENCES THROUGH<br>
+          WIREFRAMING, PROTOTYPING, &<br>
+          VISUAL DESIGN.
+        </h2>
+
+        <!-- Interactive Stats with Center Portrait -->
+        <div class="about-visual-stats">
+          <!-- Left Column Stats -->
+          <div class="stats-col stats-col-left">
+            <div class="stat-box stat-years">
+              <div class="stat-number">07</div>
+              <div class="stat-label">Years of Expereince</div>
+            </div>
+            <div class="stat-h-line" aria-hidden="true"></div>
+            <div class="stat-box stat-projects">
+              <div class="stat-number">120+</div>
+              <div class="stat-label">Total Projects</div>
+            </div>
+          </div>
+
+          <!-- Center Portrait Circle with Download CV Badge -->
+          <div class="about-center-circle-wrap">
+            <div class="about-avatar-circle">
+              <img src="assets/about-avatar.jpg" alt="Jessy Linda - UI/UX Designer" class="about-avatar-img">
+            </div>
+
+            <!-- Download CV Badge Button (SVG) -->
+            <a href="#contact" class="starburst-badge cv-badge" id="btn-download-cv" aria-label="Download My CV">
+              <img src="assets/badge-cv.svg" alt="Download My CV ↓" class="cv-badge-img">
+            </a>
+          </div>
+
+          <!-- Right Column Stats -->
+          <div class="stats-col stats-col-right">
+            <div class="stat-box stat-rating">
+              <div class="stars-row" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <div class="stat-number">5.00</div>
+              <div class="stat-label">70 rating</div>
+            </div>
+            <div class="stat-h-line" aria-hidden="true"></div>
+            <div class="stat-box stat-awards">
+              <div class="stat-number">03</div>
+              <div class="stat-label">Awards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST PORTFOLIO SECTION -->
+    <section class="section-portfolio" id="portfolio">
+      <div class="portfolio-watermark-wrap">
+        <div class="watermark watermark-portfolio" aria-hidden="true">LATEST PORTFOLIO</div>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Project Card 1: Mockup Design -->
+        <div class="portfolio-card" data-project="mockup-design" tabindex="0" role="button" aria-label="View Mockup Design Project Details">
+          <div class="portfolio-card-media">
+            <img src="assets/portfolio-01-macbook.jpg" alt="Macbook Pro 16 Mockup Design" class="portfolio-img">
+          </div>
+        </div>
+
+        <!-- Project Card 2: Book Cover -->
+        <div class="portfolio-card" data-project="book-cover" tabindex="0" role="button" aria-label="View Book Cover Project Details">
+          <div class="portfolio-card-media">
+            <img src="assets/portfolio-02-books.jpg" alt="Showcase A4 Book Cover Design" class="portfolio-img">
+          </div>
+        </div>
+
+        <!-- Project Card 3: Font Design -->
+        <div class="portfolio-card" data-project="font-design" tabindex="0" role="button" aria-label="View Font Design Project Details">
+          <div class="portfolio-card-media">
+            <img src="assets/portfolio-03-tape.jpg" alt="Duct Tape Font Design Packaging" class="portfolio-img">
+          </div>
+        </div>
+
+        <!-- Project Card 4: Application -->
+        <div class="portfolio-card" data-project="application" tabindex="0" role="button" aria-label="View Application Project Details">
+          <div class="portfolio-card-media">
+            <img src="assets/portfolio-04-iphone.jpg" alt="iPhone 16 Pro Application Interface" class="portfolio-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT FEEDBACK SECTION -->
+    <section class="section-feedback" id="feedback">
+      <!-- Section Header Row -->
+      <div class="feedback-header-row">
+        <div class="feedback-heading-left">
+          <span class="orange-bar-prefix" aria-hidden="true"></span>
+          <h2 class="feedback-section-title">CLIENT FEEDBACK</h2>
+        </div>
+        <div class="feedback-heading-right">
+          <button class="btn-explore-all" id="btn-explore-feedback">Explore All</button>
+        </div>
+      </div>
+
+      <div class="feedback-list">
+        <!-- Review 1: Hugo Messy -->
+        <article class="feedback-item active" data-review="1">
+          <div class="feedback-divider-line" aria-hidden="true"></div>
+          <div class="feedback-body-grid">
+            <div class="feedback-text-col">
+              <div class="feedback-rating">
+                <span class="score">4.9</span>
+                <span class="stars">★★★★★</span>
+              </div>
+              <blockquote class="feedback-quote">
+                "Extraordinary performance! Quick solutions. Highly recommended."
+              </blockquote>
+              <div class="feedback-author-info">
+                <h3 class="author-name">Hugo Messy</h3>
+                <p class="author-role">CEO & Head of Sky Tech Inc.</p>
+              </div>
+            </div>
+
+            <div class="feedback-avatar-col">
+              <div class="feedback-avatar-circle">
+                <img src="assets/testimonial-01-hugo.png" alt="Hugo Messy" class="testimonial-photo">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 2: Rashed Kabir -->
+        <article class="feedback-item active" data-review="2">
+          <div class="feedback-divider-line" aria-hidden="true"></div>
+          <div class="feedback-body-grid">
+            <div class="feedback-text-col">
+              <div class="feedback-rating">
+                <span class="score">5.00</span>
+                <span class="stars">★★★★★</span>
+              </div>
+              <blockquote class="feedback-quote">
+                “Get Quick solutions with great quality—a recommendation that's unequivocal”
+              </blockquote>
+              <div class="feedback-author-info">
+                <h3 class="author-name">Rashed Kabir</h3>
+                <p class="author-role">CEO & Head of Sky Tech Inc.</p>
+              </div>
+            </div>
+
+            <div class="feedback-avatar-col">
+              <div class="feedback-avatar-circle">
+                <img src="assets/testimonial-02-rashed.png" alt="Rashed Kabir" class="testimonial-photo">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 3: James Bond -->
+        <article class="feedback-item" data-review="3">
+          <div class="feedback-divider-line" aria-hidden="true"></div>
+          <div class="feedback-body-grid">
+            <div class="feedback-text-col">
+              <div class="feedback-rating">
+                <span class="score">4.9</span>
+                <span class="stars">★★★★★</span>
+              </div>
+              <blockquote class="feedback-quote">
+                "Professional, creative, & truly results-driven!"
+              </blockquote>
+              <div class="feedback-author-info">
+                <h3 class="author-name">James Bond.</h3>
+                <p class="author-role">CEO & Head of Sky Tech Inc.</p>
+              </div>
+            </div>
+
+            <div class="feedback-avatar-col">
+              <div class="feedback-avatar-circle">
+                <img src="assets/testimonial-03-james.png" alt="James Bond" class="testimonial-photo">
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLIENT LOGOS STRIP -->
+    <section class="section-clients" id="clients">
+      <div class="clients-header-row">
+        <span class="clients-heading-text">SOME OF MY CLIENTS</span>
+        <span class="clients-count-text">100+ CLIENT</span>
+      </div>
+
+      <div class="clients-cards-track">
+        <div class="client-logo-card">
+          <img src="assets/client-logo-trans-1.png" alt="PWA" class="client-logo-img">
+        </div>
+        <div class="client-logo-card">
+          <img src="assets/client-logo-trans-2.png" alt="Vine" class="client-logo-img">
+        </div>
+        <div class="client-logo-card">
+          <img src="assets/client-logo-trans-3.png" alt="Tagged" class="client-logo-img">
+        </div>
+        <div class="client-logo-card">
+          <img src="assets/client-logo-trans-4.png" alt="eBay" class="client-logo-img">
+        </div>
+        <div class="client-logo-card">
+          <img src="assets/client-logo-trans-5.png" alt="Sass" class="client-logo-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-faq" id="faq">
+      <h2 class="faq-headline">QUESTION & ANSWERS</h2>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item" data-faq="1">
+          <div class="faq-divider-line" aria-hidden="true"></div>
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-content-1">
+            <span class="faq-question">MORE ABOUT ME?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-content-1">
+            <p class="faq-answer">
+              I am a multi-disciplinary UI/UX and product designer based in California with 7+ years of experience transforming ambitious startup concepts into world-class digital experiences. My work spans brand strategy, mobile apps, web applications, and complete digital design systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 (Expanded by default as in reference) -->
+        <div class="faq-item active" data-faq="2">
+          <div class="faq-divider-line" aria-hidden="true"></div>
+          <button class="faq-trigger" aria-expanded="true" aria-controls="faq-content-2">
+            <span class="faq-question">HOW CAN I CONTACT WITH YOU?</span>
+            <span class="faq-icon" aria-hidden="true">—</span>
+          </button>
+          <div class="faq-content" id="faq-content-2" style="max-height: 250px;">
+            <p class="faq-answer">
+              Creative and award-winning developer with 6+ years of experience crafting innovative digital experiences. Expert in web development, UI/UX, and interactive design. Passionate about pushing creative and technical boundaries.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item" data-faq="3">
+          <div class="faq-divider-line" aria-hidden="true"></div>
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-content-3">
+            <span class="faq-question">HOW MUCH YOUR COST?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-content-3">
+            <p class="faq-answer">
+              Project costs depend on scope, complexity, and target deadlines. We work either on a fixed-scope milestone model or an agile dedicated monthly retainer. Feel free to reach out via the contact form with your project specs for an exact tailored quote.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item" data-faq="4">
+          <div class="faq-divider-line" aria-hidden="true"></div>
+          <button class="faq-trigger" aria-expanded="false" aria-controls="faq-content-4">
+            <span class="faq-question">WHICH TYPE OF SERVICES YOU PROVIDE?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-content" id="faq-content-4">
+            <p class="faq-answer">
+              Our core services include Brand Identity & Strategy, Product Design (UI/UX wireframing, interactive prototyping, and usability testing), Design Systems, Frontend Web Development, and conversion-optimized Landing Pages.
+            </p>
+          </div>
+          <div class="faq-divider-line" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-contact" id="contact">
+      <div class="contact-watermark-wrap">
+        <div class="watermark watermark-contact" aria-hidden="true">CONTACT</div>
+      </div>
+
+      <div class="contact-card-container">
+        <!-- Left Image Column -->
+        <div class="contact-image-col">
+          <img src="assets/contact-man-red.jpg" alt="Let's Talk - Consultation" class="contact-portrait-img">
+        </div>
+
+        <!-- Right Form Column -->
+        <div class="contact-form-col">
+          <h2 class="contact-headline">LET'S TALK</h2>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <!-- Row: Full Name and Email -->
+            <div class="form-row-two-col">
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name*</label>
+                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Your Name here" required>
+                <span class="field-error" id="error-fullName"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required>
+                <span class="field-error" id="error-email"></span>
+              </div>
+            </div>
+
+            <!-- Row: Subject -->
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject*</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Write Subject line" required>
+              <span class="field-error" id="error-subject"></span>
+            </div>
+
+            <!-- Row: Message -->
+            <div class="form-group">
+              <label for="message" class="form-label">Message*</label>
+              <textarea id="message" name="message" class="form-textarea" rows="3" placeholder="" required></textarea>
+              <span class="field-error" id="error-message"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-action">
+              <button type="submit" class="btn-send-message" id="btn-submit-form">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner">
+      <!-- Centered Logo -->
+      <div class="footer-brand-wrap">
+        <a href="#top" class="footer-logo-link" aria-label="Grafty Home">
+          <img src="assets/logo.png" alt="grafty" class="footer-logo-img">
+        </a>
+      </div>
+
+      <!-- Social Icons Circle -->
+      <div class="footer-social-row">
+        <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Dribbble">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+            <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+            <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m1.37 9.74v-8.37H5.1v8.37h2.73z"/>
+          </svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Behance">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M8.228 15.01c.42 0 .77-.07 1.05-.21.28-.14.5-.32.66-.54.16-.22.28-.48.34-.78.07-.3.1-.63.1-1 0-.75-.2-1.34-.6-1.78-.4-.44-1.02-.66-1.85-.66H5.538v4.97h2.69zm-.27-6.28c.67 0 1.19-.13 1.56-.4.37-.27.56-.7.56-1.28 0-.33-.07-.61-.21-.84-.14-.23-.33-.41-.57-.54-.24-.13-.52-.22-.84-.26-.32-.04-.67-.06-1.05-.06H5.538v3.38h2.42zm7.99 4.31c-.34 0-.64.05-.9.16-.26.11-.47.26-.64.44-.17.18-.3.39-.38.64-.08.25-.13.51-.15.79h3.76c-.03-.57-.2-1.06-.51-1.46-.31-.4-.7-.57-1.18-.57zm4.05-4.48h-4.88v1.36h4.88V8.56zm-1.86 3.19c.77.34 1.37.84 1.8 1.5.43.66.65 1.48.65 2.46 0 .4-.04.81-.12 1.23h-6.86c.07.61.32 1.1.75 1.47.43.37.98.56 1.65.56.54 0 1.01-.11 1.41-.33.4-.22.7-.51.9-.87h2.24c-.31.81-.84 1.46-1.59 1.95-.75.49-1.74.74-2.96.74-.93 0-1.75-.16-2.46-.48-.71-.32-1.3-.77-1.77-1.35-.47-.58-.82-1.28-1.05-2.1-.23-.82-.35-1.73-.35-2.73 0-.96.12-1.85.36-2.67.24-.82.6-1.53 1.08-2.13.48-.6 1.08-1.06 1.8-1.38.72-.32 1.55-.48 2.49-.48.97 0 1.82.16 2.55.48.73.32 1.33.77 1.8 1.35.47.58.81 1.27 1.02 2.07.21.8.32 1.67.32 2.61v.37h-.01zM2.85 5.56h5.36c.78 0 1.47.07 2.07.21.6.14 1.11.36 1.53.66.42.3.74.68.96 1.14.22.46.33 1 .33 1.62 0 .54-.1 1.01-.3 1.41-.2.4-.49.74-.87 1.02.53.25.96.61 1.29 1.08.33.47.5 1.06.5 1.77 0 .68-.13 1.28-.39 1.8-.26.52-.63.95-1.11 1.29-.48.34-1.06.59-1.74.75-.68.16-1.44.24-2.28.24H2.85V5.56z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright & Links Row -->
+      <div class="footer-meta-row">
+        <p class="copyright-text">@2025 Grafty inc. All Right Reserved</p>
+        <div class="footer-nav-links">
+          <a href="#about" class="footer-nav-item">About</a>
+          <span class="dot-separator">.</span>
+          <a href="#portfolio" class="footer-nav-item">Work Gallery</a>
+          <span class="dot-separator">.</span>
+          <a href="#services" class="footer-nav-item">Service</a>
+        </div>
+      </div>
+
+      <!-- Bottom Watermark -->
+      <div class="footer-watermark-wrap">
+        <div class="watermark watermark-footer" aria-hidden="true">JESSY LINDA</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal for Interactive View -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
+      <div class="modal-media-wrap">
+        <img src="" alt="" id="modal-img" class="modal-img">
+      </div>
+      <div class="modal-info">
+        <span class="modal-category" id="modal-category">MOCKUP DESIGN</span>
+        <h3 class="modal-title" id="modal-title">Project Showcase</h3>
+        <p class="modal-desc" id="modal-desc">Detailed presentation of the creative project, typography hierarchy, and visual design solutions crafted for high conversion.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
