@@ -27,8 +27,8 @@ export const Header = ({ activeSection, isMobileMenuOpen, onToggleMobileMenu }) 
         </nav>
 
         <div className="nav-brand">
-          <a href="#top" className="brand-logo" aria-label="Grafty Homepage">
-            <img src={logoImg} alt="grafty" className="logo-img" />
+          <a href="#top" className="brand-logo" aria-label="Sunny Homepage">
+            <img src={logoImg} alt="Sunny" className="logo-img" />
           </a>
         </div>
 
@@ -49,7 +49,7 @@ export const Header = ({ activeSection, isMobileMenuOpen, onToggleMobileMenu }) 
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sunny"
               target="_blank"
               rel="noopener noreferrer"
               className="social-circle"
