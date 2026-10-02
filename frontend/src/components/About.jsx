@@ -57,8 +57,8 @@ export const About = ({ onDownloadCv }) => {
 
         {/* Center Visual Circle */}
         <div className="about-center-circle-wrap">
-          <div className="about-circle-frame">
-            <img src={aboutAvatar} alt="About Me Portrait" className="about-avatar-img" />
+          <div className="about-avatar-circle">
+            <img src={aboutAvatar} alt="Sunny Kumar - Full-Stack Developer" className="about-avatar-img" />
           </div>
           {/* Download CV circular starburst badge */}
           <button
