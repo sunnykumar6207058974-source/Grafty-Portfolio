@@ -96,6 +96,11 @@ export const Home = () => {
     }
   };
 
+  // Handle Resume Download from Navbar
+  const handleDownloadResume = () => {
+    showToast('📄 Downloading Sunny Kumar Resume (PDF)...');
+  };
+
   return (
     <div className="site-wrapper">
       {/* Toast Notification Container */}
@@ -106,12 +111,14 @@ export const Home = () => {
         activeSection={activeSection}
         isMobileMenuOpen={isMobileMenuOpen}
         onToggleMobileMenu={() => setIsMobileMenuOpen((prev) => !prev)}
+        onDownloadResume={handleDownloadResume}
       />
 
       {/* Mobile Drawer */}
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
+        onDownloadResume={handleDownloadResume}
       />
 
       {/* Main Content Sections */}

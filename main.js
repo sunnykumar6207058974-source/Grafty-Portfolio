@@ -383,6 +383,30 @@ function initCvDownload() {
     }
   });
 
+  const resumeNavBtns = document.querySelectorAll('#btn-resume-nav, #btn-resume-mobile');
+  resumeNavBtns.forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      showToast('📄 Downloading Sunny Kumar Resume (PDF)...');
+      if (typeof window.downloadResumePdf === 'function') {
+        try {
+          await window.downloadResumePdf('Sunny-Kumar-Resume.pdf');
+        } catch (err) {
+          console.warn('downloadResumePdf error:', err);
+        }
+      } else {
+        const a = document.createElement('a');
+        a.href = 'assets/Sunny-Kumar-Resume.pdf';
+        a.download = 'Sunny-Kumar-Resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          if (document.body.contains(a)) document.body.removeChild(a);
+        }, 1000);
+      }
+    });
+  });
+
   const exploreFeedbackBtn = document.getElementById('btn-explore-feedback');
   if (exploreFeedbackBtn) {
     exploreFeedbackBtn.addEventListener('click', () => {

@@ -1,7 +1,14 @@
 import React from 'react';
+import { downloadResumePdf } from '../utils/downloadResume.js';
 const logoImg = '/assets/logo.png';
 
-export const Header = ({ activeSection, isMobileMenuOpen, onToggleMobileMenu }) => {
+export const Header = ({ activeSection, isMobileMenuOpen, onToggleMobileMenu, onDownloadResume }) => {
+  const handleResumeDownload = async (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    if (onDownloadResume) onDownloadResume();
+    await downloadResumePdf('Sunny-Kumar-Resume.pdf');
+  };
+
   return (
     <header className="site-header" id="top">
       <div className="header-inner">
@@ -23,6 +30,34 @@ export const Header = ({ activeSection, isMobileMenuOpen, onToggleMobileMenu }) 
             className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
           >
             Contact
+          </a>
+          <a
+            href="/Sunny-Kumar-Resume.pdf"
+            download="Sunny-Kumar-Resume.pdf"
+            className="btn-resume-nav"
+            id="btn-resume-nav"
+            aria-label="Download Sunny Kumar Resume"
+            title="Download Resume"
+            onClick={handleResumeDownload}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="resume-download-icon"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" x2="12" y1="15" y2="3" />
+            </svg>
+            <span>Resume</span>
           </a>
         </nav>
 
