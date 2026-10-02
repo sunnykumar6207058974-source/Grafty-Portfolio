@@ -362,8 +362,25 @@ function initCvDownload() {
   const cvBtn = document.getElementById('btn-download-cv');
   if (!cvBtn) return;
 
-  cvBtn.addEventListener('click', () => {
+  cvBtn.addEventListener('click', async (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     showToast('📄 Downloading Sunny Kumar Curriculum Vitae (PDF)...');
+    if (typeof window.downloadResumePdf === 'function') {
+      try {
+        await window.downloadResumePdf();
+      } catch (err) {
+        console.warn('downloadResumePdf error:', err);
+      }
+    } else {
+      const a = document.createElement('a');
+      a.href = 'assets/Sunny_Kumar_Resume.pdf';
+      a.download = 'Sunny_Kumar_Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        if (document.body.contains(a)) document.body.removeChild(a);
+      }, 1000);
+    }
   });
 
   const exploreFeedbackBtn = document.getElementById('btn-explore-feedback');

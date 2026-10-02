@@ -13,6 +13,7 @@ import { Footer } from '../components/Footer.jsx';
 import { ProjectModal } from '../components/ProjectModal.jsx';
 import { Toast } from '../components/Toast.jsx';
 import { api } from '../services/api.js';
+import { downloadResumePdf } from '../utils/downloadResume.js';
 
 export const Home = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -85,8 +86,14 @@ export const Home = () => {
   }, []);
 
   // Handle CV Download action
-  const handleDownloadCv = () => {
+  const handleDownloadCv = async (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     showToast('📄 Downloading Sunny Kumar Curriculum Vitae (PDF)...');
+    try {
+      await downloadResumePdf();
+    } catch (err) {
+      console.error('Download error:', err);
+    }
   };
 
   return (
