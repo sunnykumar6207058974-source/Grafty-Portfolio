@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const Services = ({ services = [] }) => {
-  const [activeId, setActiveId] = useState('branding');
+  const [activeId, setActiveId] = useState(services[0]?.id || 'full-stack');
 
   const toggleService = (id) => {
     setActiveId((prev) => (prev === id ? null : id));
@@ -32,10 +32,7 @@ export const Services = ({ services = [] }) => {
                 aria-expanded={isActive}
                 onClick={() => toggleService(service.id)}
               >
-                <div className="service-trigger-left">
-                  <span className="service-number">{service.num}</span>
-                  <span className="service-title-text">{service.title}</span>
-                </div>
+                <span className="service-title">{service.title}</span>
                 <div className="service-icon" aria-hidden="true">
                   {isActive ? '—' : '+'}
                 </div>
@@ -44,7 +41,7 @@ export const Services = ({ services = [] }) => {
               <div
                 className="service-content"
                 style={{
-                  maxHeight: isActive ? '300px' : '0px',
+                  maxHeight: isActive ? '380px' : '0px',
                   overflow: 'hidden',
                   transition: 'max-height 0.4s ease'
                 }}

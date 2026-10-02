@@ -1,15 +1,19 @@
 import React from 'react';
 
-const proj1 = '/assets/portfolio-01-macbook.jpg';
-const proj2 = '/assets/portfolio-02-books.jpg';
-const proj3 = '/assets/portfolio-03-tape.jpg';
-const proj4 = '/assets/portfolio-04-iphone.jpg';
+const cartifyImg = '/assets/cartify.jpg';
+const urbanthreadImg = '/assets/urbanthread.jpg';
+const pixelforgeImg = '/assets/pixelforge.jpg';
+const aetheriaImg = '/assets/aetheria.jpg';
 
 const imageMap = {
-  'mockup-design': proj1,
-  'book-cover': proj2,
-  'font-design': proj3,
-  'application': proj4
+  'cartify': cartifyImg,
+  'urbanthread': urbanthreadImg,
+  'pixelforge': pixelforgeImg,
+  'aetheria': aetheriaImg,
+  'mockup-design': '/assets/portfolio-01-macbook.jpg',
+  'book-cover': '/assets/portfolio-02-books.jpg',
+  'font-design': '/assets/portfolio-03-tape.jpg',
+  'application': '/assets/portfolio-04-iphone.jpg'
 };
 
 export const Portfolio = ({ projects = [], onSelectProject }) => {
@@ -36,12 +40,12 @@ export const Portfolio = ({ projects = [], onSelectProject }) => {
               onClick={() => onSelectProject({ ...proj, displayImg: imgSrc })}
               style={{ cursor: 'pointer' }}
             >
-              <div className="portfolio-media-wrap">
+              <div className="portfolio-card-media">
                 <img src={imgSrc} alt={proj.title} className="portfolio-img" />
               </div>
-              <div className="portfolio-info">
-                <span className="portfolio-category">{proj.category}</span>
-                <h3 className="portfolio-title">{proj.title}</h3>
+              <div className="portfolio-badge-group">
+                <span className="project-tag-pill">{proj.title.split(' - ')[0] || proj.title}</span>
+                <span className="project-arrow-btn" aria-hidden="true">↗</span>
               </div>
             </div>
           );

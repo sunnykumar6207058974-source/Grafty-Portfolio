@@ -132,6 +132,30 @@ function initFaqAccordion() {
    4. PORTFOLIO MODAL PREVIEW
    ========================================================================== */
 const projectData = {
+  'cartify': {
+    category: 'E-COMMERCE',
+    title: 'Cartify - Premium E-Commerce Shopping Platform',
+    desc: 'Built a full-stack e-commerce platform with product category management, interactive shopping cart, dark mode toggle, and instant dispatch tracking.',
+    img: 'assets/cartify.jpg'
+  },
+  'urbanthread': {
+    category: 'E-COMMERCE',
+    title: 'UrbanThread - Luxe Sneakers & Streetwear Drops',
+    desc: 'Developed a high-end streetwear e-commerce platform featuring exclusive sneaker drops, flash sales, promo code discount engine, wishlist, and admin analytics dashboard.',
+    img: 'assets/urbanthread.jpg'
+  },
+  'pixelforge': {
+    category: 'WEB APPS',
+    title: 'PixelForge - Developer Portfolio & Digital Showcase',
+    desc: 'Created an interactive developer portfolio featuring an HTML5 canvas particle background, theme switching context, video demo popups, custom cursor, and printable resume viewer.',
+    img: 'assets/pixelforge.jpg'
+  },
+  'aetheria': {
+    category: 'WEBGL 3D',
+    title: 'Aetheria - Immersive WebGL 3D Matrix Experience',
+    desc: 'Architected a 3D WebGL digital experience with 60 FPS matrix torus particles, audio sound FX, zero-trust API security, and ultra-fast sub-second loading speeds.',
+    img: 'assets/aetheria.jpg'
+  },
   'mockup-design': {
     category: 'MOCKUP DESIGN',
     title: 'Macbook Pro 16 Studio Mockup',

@@ -20,68 +20,145 @@ export const db = {
 
   services: [
     {
-      id: "branding",
+      id: "full-stack",
       num: "01",
-      title: "BRANDING & IDENTITY",
-      desc: "Comprehensive brand positioning, distinctive typography hierarchies, bespoke color palettes, and memorable brand guidelines tailored for digital and physical touchpoints.",
-      tags: ["Logo Design", "Styleguides", "Visual Strategy"]
+      title: "FULL-STACK WEB DEVELOPMENT",
+      desc: "Building fast, responsive, and modern websites using React.js, JavaScript (ES6+), Tailwind CSS, Node.js, and sub-second performance architectures.",
+      tags: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "Vite", "Responsive UI"]
+    },
+    {
+      id: "backend-api",
+      num: "02",
+      title: "BACKEND & RESTFUL API ARCHITECTURE",
+      desc: "Creating secure, scalable backend server systems with Node.js, Express.js, MongoDB databases, RESTful endpoints, and robust authentication workflows.",
+      tags: ["Node.js", "Express.js", "MongoDB", "REST APIs", "JWT Auth"]
+    },
+    {
+      id: "ecommerce",
+      num: "03",
+      title: "E-COMMERCE STOREFRONTS & PLATFORMS",
+      desc: "Engineering full-funnel digital shopping stores with cart drawers, product category filters, instant search, promo discount engines, and checkout systems.",
+      tags: ["Shopping Cart", "Product Grids", "Checkout Flow", "Admin Analytics"]
     },
     {
       id: "ui-ux",
-      num: "02",
-      title: "PRODUCT UI/UX DESIGN",
-      desc: "User-centric interface research, wireframing, high-fidelity responsive prototyping, and pixel-perfect design systems built to elevate conversions and delightful user flows.",
-      tags: ["Mobile Apps", "Web Apps", "Design Systems"]
-    },
-    {
-      id: "development",
-      num: "03",
-      title: "FULL-STACK DEVELOPMENT",
-      desc: "Performant, accessible, and scalable frontend and backend architectures utilizing modern component workflows, clean RESTful APIs, and responsive CSS styling.",
-      tags: ["React & Node.js", "REST APIs", "Modern CSS"]
-    },
-    {
-      id: "art-direction",
       num: "04",
-      title: "CREATIVE ART DIRECTION",
-      desc: "Visual storytelling, bespoke 3D staging, creative photo direction, and interactive web layouts engineered to capture attention and differentiate brands in crowded markets.",
-      tags: ["Editorial", "3D Mockups", "Campaigns"]
+      title: "UI/UX & INTERACTIVE WEB EXPERIENCES",
+      desc: "Translating brand visions into intuitive responsive user interfaces, wireframes, accessible component design systems, and delightful digital user flows.",
+      tags: ["UI/UX Design", "Wireframing", "Component Systems", "Micro-Interactions"]
+    },
+    {
+      id: "video-editing",
+      num: "05",
+      title: "VIDEO EDITING & CREATIVE MEDIA",
+      desc: "Crafting high-engagement video content, multi-track cutting, color grading, audio synchronization, motion graphics, promo reels, and social media clips.",
+      tags: ["Video Cutting", "Motion Graphics", "Color Grading", "Audio Sync", "Promo Videos"]
+    },
+    {
+      id: "cloud-deployment",
+      num: "06",
+      title: "CLOUD DEPLOYMENT & WEB OPTIMIZATION",
+      desc: "Production-ready deployment pipelines using Vercel, Git & GitHub, performance tuning, and SEO-optimized web standards.",
+      tags: ["Git & GitHub", "Vercel", "CI/CD Workflows", "SEO Optimization"]
     }
   ],
 
   projects: [
     {
-      id: "mockup-design",
-      category: "MOCKUP DESIGN",
-      title: "Macbook Pro 16 Studio Mockup",
-      desc: "High-fidelity 3D device showcase featuring vibrant contrast, realistic concrete textures, and custom responsive layouts designed for presentation pitching.",
-      image: "assets/portfolio-01-macbook.jpg",
-      year: "2025"
+      id: "cartify",
+      category: "E-COMMERCE",
+      title: "Cartify - Premium E-Commerce Shopping Platform",
+      desc: "Built a full-stack e-commerce platform with product category management, interactive shopping cart, dark mode toggle, and instant dispatch tracking.",
+      image: "/assets/cartify.jpg",
+      year: "2026",
+      tech: ["React.js", "Node.js", "Tailwind CSS", "MongoDB", "Express.js"],
+      features: [
+        "Interactive Shopping Cart & Express Checkout",
+        "Category Filters & Product Search Bar",
+        "Dark / Light Theme & 24/7 Express Support"
+      ],
+      demoUrl: "https://cartify-store-amber.vercel.app",
+      githubUrl: "https://github.com/sunnykumar6207058974-source/Cartify",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
     },
     {
-      id: "book-cover",
-      category: "BOOK COVER",
-      title: "Showcase A4 Minimalist Editorial",
-      desc: "Minimalist editorial publication design featuring clean typographic grids, premium spine layouts, and vibrant cobalt blue studio staging.",
-      image: "assets/portfolio-02-books.jpg",
-      year: "2024"
+      id: "urbanthread",
+      category: "E-COMMERCE",
+      title: "UrbanThread - Luxe Sneakers & Streetwear Drops",
+      desc: "Developed a high-end streetwear e-commerce platform featuring exclusive sneaker drops, flash sales, promo code discount engine, wishlist, and admin analytics dashboard.",
+      image: "/assets/urbanthread.jpg",
+      year: "2026",
+      tech: ["React.js", "Tailwind CSS", "Redux", "REST API", "Vite"],
+      features: [
+        "Sneakerhead Drops & Flash Deal Banners",
+        "Promo Code Discount Engine (SNEAKER20)",
+        "Wishlist, Cart Drawer & Admin Analytics Dashboard"
+      ],
+      demoUrl: "https://urban-thread-sand.vercel.app",
+      githubUrl: "https://github.com/sunnykumar6207058974-source/UrbanThread",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     },
     {
-      id: "font-design",
-      category: "FONT DESIGN",
-      title: "Duct Tape Custom Typography",
-      desc: "Experimental dimensional font branding crafted for industrial street-culture packaging, featuring high-contrast orange and white visual dynamics.",
-      image: "assets/portfolio-03-tape.jpg",
-      year: "2024"
+      id: "pixelforge",
+      category: "WEB APPS",
+      title: "PixelForge - Developer Portfolio & Digital Showcase",
+      desc: "Created an interactive developer portfolio featuring an HTML5 canvas particle background, theme switching context, video demo popups, custom cursor, and printable resume viewer.",
+      image: "/assets/pixelforge.jpg",
+      year: "2026",
+      tech: ["React.js", "Framer Motion", "Tailwind CSS", "HTML5 Canvas", "Vite"],
+      features: [
+        "Interactive 3D Matrix Canvas Particle Grid",
+        "Video Lightbox Player with Framer Motion Dialog",
+        "Executive Resume Printable PDF & Dynamic Dark Theme"
+      ],
+      demoUrl: "https://pixelforge-dev.vercel.app",
+      githubUrl: "https://github.com/sunnykumar6207058974-source/PixelForge",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
     },
     {
-      id: "application",
-      category: "APPLICATION",
-      title: "iPhone 16 Pro Application Interface",
-      desc: "Next-generation mobile operating UI design featuring deep purple radial gradients, tactile glassmorphism elements, and refined micro-interactions.",
-      image: "assets/portfolio-04-iphone.jpg",
-      year: "2025"
+      id: "aetheria",
+      category: "WEBGL 3D",
+      title: "Aetheria - Immersive WebGL 3D Matrix Experience",
+      desc: "Architected a 3D WebGL digital experience with 60 FPS matrix torus particles, audio sound FX, zero-trust API security, and ultra-fast sub-second loading speeds.",
+      image: "/assets/aetheria.jpg",
+      year: "2026",
+      tech: ["Three.js", "WebGL", "GSAP", "Tailwind CSS", "Node.js"],
+      features: [
+        "Real-time Three.js Particle Physics Engine",
+        "Post-Processing Bloom Filters & Spatial Audio",
+        "Zero-Trust API Architecture & Ultra Fast Load (<0.8s)"
+      ],
+      demoUrl: "https://aetheria-matrix.vercel.app",
+      githubUrl: "https://github.com/sunnykumar6207058974-source/Aetheria",
+      videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4"
     }
+  ],
+
+  technologies: [
+    "React.js",
+    "JavaScript (ES6+)",
+    "Node.js",
+    "Express.js",
+    "Tailwind CSS",
+    "HTML5",
+    "CSS3",
+    "REST APIs",
+    "MongoDB",
+    "Git",
+    "GitHub",
+    "Vercel",
+    "Vite"
+  ],
+
+  creativeExpertise: [
+    "Video Cutting & Trimming",
+    "Motion Graphics",
+    "Audio Synchronization",
+    "Color Grading",
+    "Storyboarding",
+    "Social Media Clips",
+    "Promo Videos",
+    "Reel Editing"
   ],
 
   testimonials: [
