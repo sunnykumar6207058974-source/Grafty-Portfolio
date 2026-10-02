@@ -84,7 +84,7 @@ export const Hero = () => {
             <p className="card-desc">
               7+ Years of Expertise, Award-Winning Creative Designer in California, USA.
             </p>
-            <a href="mailto:hello@linda.com" className="card-email">hello@linda.com</a>
+            <a href="mailto:sunnykumar6207058974@gmail.com" className="card-email">sunnykumar6207058974@gmail.com</a>
 
             {/* Scalloped Discuss Badge Button (SVG) */}
             <a href="#contact" className="starburst-badge discuss-badge" aria-label="Let's Discuss">

@@ -74,8 +74,8 @@ export const Contact = ({ onShowToast }) => {
               Have an exciting project, design partnership, or full-time opportunity in mind? Drop a line.
             </p>
             <div className="direct-contact-items">
-              <a href="mailto:hello@linda.com" className="direct-link">
-                <span className="direct-icon">✉</span> hello@linda.com
+              <a href="mailto:sunnykumar6207058974@gmail.com" className="direct-link">
+                <span className="direct-icon">✉</span> sunnykumar6207058974@gmail.com
               </a>
               <span className="direct-link">
                 <span className="direct-icon">📍</span> San Francisco, California

@@ -154,7 +154,7 @@ export const api = {
         {
           id: 'faq-4',
           question: 'How do we get started?',
-          answer: 'Simply submit a message through the contact form or email hello@linda.com with details about your timeline, goals, and budget. I will review and reply within 24 hours.'
+          answer: 'Simply submit a message through the contact form or email sunnykumar6207058974@gmail.com with details about your timeline, goals, and budget. I will review and reply within 24 hours.'
         }
       ];
     }

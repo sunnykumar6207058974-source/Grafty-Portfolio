@@ -474,12 +474,14 @@ button {
 }
 
 .card-email {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-main);
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: color 0.2s ease;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .card-email:hover {
