@@ -1,113 +1,180 @@
-# Grafty — Creative Personal Portfolio
+# Grafty — Full-Stack Creative Personal Portfolio
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-Design-success?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.19-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
-A faithful, pixel-perfect recreation of the award-winning **Grafty | Creative Personal Portfolio (Jessy Linda)** design inspired by Dribbble ([Shot #26547917](https://dribbble.com/shots/26547917-Personal-Portfolio)).
-
-Built with pure **Semantic HTML5**, **Vanilla CSS3**, and **Vanilla JavaScript** — fast, responsive, and completely dependency-free.
+A modern, full-stack personal portfolio application built with a modular **React (Vite)** frontend and an **Express.js** REST API backend. Preserves 100% visual fidelity, editorial typography, micro-interactions, responsive layouts, and custom assets.
 
 ---
 
-## ✨ Features
+## 📁 Project Architecture
 
-- **Navigation & Brand Bar**:
-  - Sticky glassmorphic header (`backdrop-filter: blur(12px)`).
-  - Quick action social circular buttons & "Hire Me!" CTA.
-  - Full-screen mobile navigation drawer with hamburger toggle.
+The codebase is organized into separate frontend and backend directories connected via REST APIs:
 
-- **Editorial Hero Section**:
-  - Centered arch portrait with ambient orange glow blending into canvas (`#C4CDD6`).
-  - Electric neon purple cursive signature (`#7406FF`) overlay with soft drop-shadow.
-  - Tilted 3D floating badges (`Branding` & `Desinger`) anchored to the arch.
-  - High-impact editorial headline in **Anton** typography.
-  - Floating info card featuring the 16-scallop rosette starburst button (`LET'S DISCUSS ↗`).
-
-- **Services Accordion**:
-  - Interactive expanding cards for `BRANDING`, `DESIGN`, `MARKETING`, and `CODE`.
-  - Smooth height & opacity animations with toggle indicators (`+` / `—`).
-
-- **About Me & Interactive Stats**:
-  - Editorial 4-line condensed statement.
-  - Clean stats layout (`07 Years of Experience`, `120+ Projects`, `5.00 Rating`, `03 Awards`).
-  - Circular portrait with centered scalloped starburst badge (`DOWNLOAD MY CV ↓`).
-
-- **Latest Portfolio Grid**:
-  - 2×2 project showcase with 1:1 original mockups:
-    1. *MacBook Pro 16* (`MOCKUP DESIGN ↗`)
-    2. *A4 Showcase Books* (`BOOK COVER ↗`)
-    3. *Red Tape Roll* (`FONT DESIGN ↗`)
-    4. *iPhone 16 Pro* (`APPLICATION ↗`)
-  - Interactive lightbox modal with project details and full-resolution view.
-
-- **Client Feedback (Testimonials)**:
-  - Star ratings, client quotes, titles, and monochrome circular portraits for social proof.
-
-- **Client Logo Grid**:
-  - Clean rounded white cards highlighting client partnerships (`PWA`, `Vine`, `Tagged`, `eBay`, `Sass`).
-
-- **FAQ (Question & Answers)**:
-  - Minimalist accordion list with sleek divider rules and instant toggle states.
-
-- **Contact Card & Giant Watermark Footer**:
-  - Editorial split card: high-contrast portrait on left, interactive form on right.
-  - Real-time client-side form validation with floating animated toast alerts.
-  - Full-width footer with brand mark, social links, copyright, and giant `JESSY LINDA` watermark.
+```text
+project/
+├── frontend/
+│   ├── public/
+│   │   └── assets/              # Static assets (images, badges, logos)
+│   ├── src/
+│   │   ├── assets/              # Local design assets
+│   │   ├── components/          # Reusable React UI components
+│   │   │   ├── About.jsx        # Stats, circular portrait & CV download CTA
+│   │   │   ├── Clients.jsx      # Global client logo track
+│   │   │   ├── Contact.jsx      # Contact form with validation & API submit
+│   │   │   ├── Faq.jsx          # Interactive accordion FAQ
+│   │   │   ├── Footer.jsx       # Footer links, brand mark & watermark
+│   │   │   ├── Header.jsx       # Sticky glassmorphic navbar & mobile toggle
+│   │   │   ├── Hero.jsx         # Arch portrait, "Developer" badge & signature
+│   │   │   ├── MobileDrawer.jsx # Mobile navigation drawer
+│   │   │   ├── Portfolio.jsx    # 2x2 project grid showcase
+│   │   │   ├── ProjectModal.jsx # Project detail lightbox dialog
+│   │   │   ├── Services.jsx     # Accordion service cards
+│   │   │   ├── Testimonials.jsx # Client review cards with star ratings
+│   │   │   └── Toast.jsx        # Animated floating toast notifications
+│   │   ├── pages/
+│   │   │   └── Home.jsx         # Main page orchestrating layout & state
+│   │   ├── services/
+│   │   │   └── api.js           # REST API client with fallback resilience
+│   │   ├── App.jsx              # Root application component
+│   │   ├── index.css            # Complete design system & custom CSS
+│   │   └── main.jsx             # React DOM entry point
+│   ├── index.html               # Frontend HTML shell with Google Fonts
+│   ├── package.json             # Frontend dependencies & scripts
+│   └── vite.config.js           # Vite config with API proxy
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js                # Database connection & seed datastore
+│   ├── controllers/
+│   │   ├── contactController.js # Contact form handler & retrieval
+│   │   ├── contentController.js # Services, testimonials & FAQs handlers
+│   │   └── projectController.js # Projects CRUD & filter handlers
+│   ├── middleware/
+│   │   ├── errorHandler.js      # Centralized error response handler
+│   │   └── validateContact.js   # Input validation middleware
+│   ├── models/
+│   │   ├── Contact.js           # Contact inquiry schema model
+│   │   ├── Faq.js               # FAQ question & answer schema model
+│   │   ├── Project.js           # Portfolio project schema model
+│   │   ├── Service.js           # Specialty service schema model
+│   │   └── Testimonial.js       # Client feedback review schema model
+│   ├── routes/
+│   │   ├── contactRoutes.js     # /api/contact routes
+│   │   ├── contentRoutes.js     # /api/services, /api/testimonials, /api/faqs
+│   │   └── projectRoutes.js     # /api/projects routes
+│   ├── .env                     # Environment variables (PORT, NODE_ENV)
+│   ├── package.json             # Backend dependencies & scripts
+│   └── server.js                # Express server entry point
+│
+├── package.json                 # Root monorepo dev orchestrator
+└── README.md                    # Documentation
+```
 
 ---
 
 ## 🚀 Getting Started
 
-Clone the repository and run locally:
+### Prerequisites
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+
+### Installation
+Run the root setup command to install dependencies across both frontend and backend:
 
 ```bash
-git clone https://github.com/sunnykumar6207058974-source/Grafty-Portfolio.git
-cd Grafty-Portfolio
-```
-
-### Running Locally
-
-You can serve the static files with any local HTTP server:
-
-Using Python:
-```bash
-python3 -m http.server 3300
-```
-Then open [http://localhost:3300](http://localhost:3300) in your browser.
-
-Or using Node:
-```bash
-npm start
+npm run install:all
 ```
 
 ---
 
-## 🎨 Design System
+## 💻 Running the Application
 
-| Token | Value | Description |
+### Option 1: Run Full-Stack Concurrently (Recommended)
+From the root project folder:
+
+```bash
+npm run dev
+```
+
+This concurrently boots:
+- **Backend API**: [http://localhost:5050](http://localhost:5050)
+- **Frontend App**: [http://localhost:5174](http://localhost:5174)
+
+### Option 2: Run Separately in Individual Terminals
+
+**Backend:**
+```bash
+cd backend
+npm run dev
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm run dev
+```
+
+### Option 3: Production Build
+```bash
+npm run build
+```
+
+---
+
+## 📡 REST API Documentation
+
+| Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| **Canvas Background** | `#C4CDD6` | Muted cool-grey editorial canvas |
-| **Primary Text** | `#0D0D0D` | Deep rich black |
-| **Accent Orange** | `#FF451A` | Vibrant high-visibility accent |
-| **Neon Signature** | `#7406FF` | Electric purple glow script |
-| **Card Surface** | `#FFFFFF` | Crisp pure white rounded surfaces |
-| **Display Font** | `Anton`, `Oswald` | Bold condensed editorial grotesque |
-| **Body Font** | `Plus Jakarta Sans` | Modern geometric sans-serif |
+| `GET` | `/api/health` | Service health status check |
+| `GET` | `/api/projects` | Retrieve all featured portfolio projects |
+| `GET` | `/api/projects/:id` | Retrieve single project details by ID |
+| `GET` | `/api/services` | Retrieve list of core specialties |
+| `GET` | `/api/testimonials` | Retrieve client reviews and ratings |
+| `GET` | `/api/faqs` | Retrieve frequently asked questions |
+| `GET` | `/api/profile` | Retrieve profile metadata |
+| `POST` | `/api/contact` | Submit a new contact message with validation |
+| `GET` | `/api/contact` | Retrieve submitted messages (Admin) |
+
+### Sample Contact Request
+`POST /api/contact`
+```json
+{
+  "fullName": "Jane Doe",
+  "email": "jane@example.com",
+  "subject": "Mobile App UI/UX Redesign",
+  "message": "Hi Sunny, we'd like to collaborate on our next mobile product."
+}
+```
+
+### Sample Response
+```json
+{
+  "success": true,
+  "message": "Thank you, Jane Doe! Your message has been received.",
+  "data": {
+    "id": "cnt-1718000000000",
+    "fullName": "Jane Doe",
+    "email": "jane@example.com",
+    "subject": "Mobile App UI/UX Redesign",
+    "message": "Hi Sunny, we'd like to collaborate on our next mobile product.",
+    "createdAt": "2026-10-01T22:30:00.000Z"
+  }
+}
+```
 
 ---
 
-## 📱 Responsive Support
-
-Fully tested and responsive across:
-- **Desktop**: 1600px+
-- **Laptop**: 1280px
-- **Tablet**: 768px – 1024px
-- **Mobile**: 375px – 480px
+## 🎨 Design Highlights & Customizations
+- **Hero Badge**: Rotated high-contrast badge set to **"Developer"**.
+- **Signature Script**: Transparent neon electric purple (`#7406FF`) handwritten script signature **"Sunny Kumar"** with center arch gap and ambient glow.
+- **Hero Portrait**: High-resolution studio portrait of Sunny Kumar with crimson red gradient background.
+- **Interactive Badges**: 3D parallax displacement tracking cursor movement on desktop.
+- **Glassmorphic Navigation**: Sticky header with backdrop blur and active section scroll spy.
 
 ---
 
 ## 📄 License
-
 This project is open-source under the [MIT License](LICENSE).
