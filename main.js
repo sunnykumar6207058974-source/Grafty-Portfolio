@@ -277,7 +277,7 @@ function initContactForm() {
       form.reset();
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
-      showToast('🎉 Thank you! Your message has been sent to Jessy Linda.');
+      showToast('🎉 Thank you! Your message has been sent to Sunny Kumar.');
     }, 900);
   });
 }

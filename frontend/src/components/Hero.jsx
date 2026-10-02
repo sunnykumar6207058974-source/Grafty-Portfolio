@@ -70,7 +70,7 @@ export const Hero = () => {
 
         {/* Left Typography */}
         <div className="hero-left-col">
-          <p className="hero-greeting">Hi 👋, I'm <span className="name-bold">Jessy Linda</span></p>
+          <p className="hero-greeting">Hi 👋, I'm <span className="name-bold">Sunny Kumar</span></p>
           <h1 className="hero-headline">
             BRANDING,<br />
             PRODUCT UI/UX<br />

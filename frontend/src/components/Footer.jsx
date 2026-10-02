@@ -52,7 +52,7 @@ export const Footer = () => {
 
         {/* Bottom Watermark */}
         <div className="footer-watermark-wrap">
-          <div className="watermark watermark-footer" aria-hidden="true">JESSY LINDA</div>
+          <div className="watermark watermark-footer" aria-hidden="true">SUNNY KUMAR</div>
         </div>
       </div>
     </footer>

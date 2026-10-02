@@ -5,7 +5,7 @@
 export const db = {
   profile: {
     name: "Sunny Kumar",
-    displayName: "Jessy Linda",
+    displayName: "Sunny Kumar",
     title: "BRANDING, PRODUCT UI/UX & DESIGN.",
     badge1: "Branding",
     badge2: "Developer",
