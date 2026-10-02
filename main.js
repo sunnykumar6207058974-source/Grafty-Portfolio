@@ -362,9 +362,8 @@ function initCvDownload() {
   const cvBtn = document.getElementById('btn-download-cv');
   if (!cvBtn) return;
 
-  cvBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    showToast('📄 Downloading Jessy Linda — Creative Designer CV...');
+  cvBtn.addEventListener('click', () => {
+    showToast('📄 Downloading Sunny Kumar Curriculum Vitae (PDF)...');
   });
 
   const exploreFeedbackBtn = document.getElementById('btn-explore-feedback');

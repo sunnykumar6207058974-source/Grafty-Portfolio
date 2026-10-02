@@ -61,14 +61,16 @@ export const About = ({ onDownloadCv }) => {
             <img src={aboutAvatar} alt="Sunny Kumar - Full-Stack Developer" className="about-avatar-img" />
           </div>
           {/* Download CV circular starburst badge */}
-          <button
+          <a
+            href="/Sunny_Kumar_Resume.pdf"
+            download="Sunny_Kumar_Resume.pdf"
             className="starburst-badge cv-badge"
             id="btn-download-cv"
             aria-label="Download CV"
             onClick={onDownloadCv}
           >
             <img src={badgeCvSvg} alt="Download CV ↘" className="cv-badge-img" />
-          </button>
+          </a>
         </div>
 
         {/* Right Column Stats */}

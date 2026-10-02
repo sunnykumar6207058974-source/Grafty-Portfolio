@@ -30,6 +30,12 @@ export const getFaqs = async (req, res, next) => {
   }
 };
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export const getProfile = async (req, res, next) => {
   try {
     return res.json({ success: true, data: db.profile });
@@ -37,3 +43,14 @@ export const getProfile = async (req, res, next) => {
     next(err);
   }
 };
+
+export const downloadCv = async (req, res, next) => {
+  try {
+    const resumePath = path.join(__dirname, '../data/Sunny_Kumar_Resume.pdf');
+    res.download(resumePath, 'Sunny_Kumar_Resume.pdf');
+  } catch (err) {
+    next(err);
+  }
+};
+
+
