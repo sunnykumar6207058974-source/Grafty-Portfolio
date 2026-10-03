@@ -70,20 +70,6 @@ export const Header = ({ activeSection, isMobileMenuOpen, onToggleMobileMenu, on
         <div className="nav-actions">
           <div className="social-icons">
             <a
-              href="https://dribbble.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-circle"
-              aria-label="Dribbble"
-            >
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
-                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
-                <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
-              </svg>
-            </a>
-            <a
               href="https://www.linkedin.com/in/sunny"
               target="_blank"
               rel="noopener noreferrer"
