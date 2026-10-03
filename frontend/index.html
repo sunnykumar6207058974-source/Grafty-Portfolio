@@ -18,7 +18,18 @@
   <link rel="icon" type="image/png" href="/assets/logo.png">
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div id="site-loader" class="site-loader" aria-label="Loading Sunny Portfolio" role="status">
+      <div class="loader-content">
+        <div class="loader-brand">
+          <img src="/assets/logo-loader.png" alt="Sunny" class="loader-logo-img">
+        </div>
+        <div class="loader-bar-wrap" aria-hidden="true">
+          <div class="loader-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>

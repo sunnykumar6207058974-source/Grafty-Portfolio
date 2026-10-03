@@ -7,7 +7,7 @@ export const Footer = () => {
         {/* Centered Logo */}
         <div className="footer-brand-wrap">
           <a href="#top" className="footer-logo-link" aria-label="Sunny Home">
-            <img src="/assets/logo.png" alt="Sunny" className="footer-logo-img" />
+            <img src="/assets/logo-footer.png" alt="Sunny" className="footer-logo-img" />
           </a>
         </div>
 
@@ -40,7 +40,7 @@ export const Footer = () => {
 
         {/* Copyright & Links Row */}
         <div className="footer-meta-row">
-          <p className="copyright-text">@2025 Grafty inc. All Right Reserved</p>
+          <p className="copyright-text">© 2025 Sunny Inc. All Right Reserved.</p>
           <div className="footer-nav-links">
             <a href="#about" className="footer-nav-item">About</a>
             <span className="dot-separator">.</span>

@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initMobileMenu();
   initServicesAccordion();
   initFaqAccordion();
@@ -13,6 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallaxBadges();
   initCvDownload();
 });
+
+/* ==========================================================================
+   0. SITE PRELOADER
+   ========================================================================== */
+function initPreloader() {
+  const loader = document.getElementById('site-loader');
+  if (!loader) return;
+
+  const hideLoader = () => {
+    setTimeout(() => {
+      loader.classList.add('loader-fade-out');
+      setTimeout(() => {
+        loader.remove();
+      }, 500);
+    }, 1100);
+  };
+
+  if (document.readyState === 'complete') {
+    hideLoader();
+  } else {
+    window.addEventListener('load', hideLoader, { once: true });
+  }
+}
 
 /* ==========================================================================
    1. MOBILE MENU TOGGLE

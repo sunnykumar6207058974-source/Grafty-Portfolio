@@ -45,7 +45,7 @@ export const Hero = () => {
   return (
     <section className="section-hero" id="hero" ref={heroRef}>
       {/* Watermark Background Text */}
-      <div className="watermark watermark-hero" aria-hidden="true">DESIGNER</div>
+      <div className="watermark watermark-hero" aria-hidden="true">DEVELOPER</div>
 
       <div className="hero-content-wrapper">
         {/* Center Visual Portrait */}
