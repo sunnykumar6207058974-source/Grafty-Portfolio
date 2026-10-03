@@ -38,7 +38,7 @@ export const Faq = ({ faqs = [] }) => {
               <div
                 className="faq-content"
                 style={{
-                  maxHeight: isActive ? '250px' : '0px',
+                  maxHeight: isActive ? '350px' : '0px',
                   overflow: 'hidden',
                   transition: 'max-height 0.4s ease'
                 }}
