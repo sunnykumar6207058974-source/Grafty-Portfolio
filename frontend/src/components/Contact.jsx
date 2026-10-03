@@ -65,23 +65,9 @@ export const Contact = ({ onShowToast }) => {
       </div>
 
       <div className="contact-card-container">
-        {/* Left Column: Visual & Direct Contact Info */}
+        {/* Left Column: Visual Portrait */}
         <div className="contact-image-col">
-          <img src={contactManImg} alt="Contact Sunny Kumar" className="contact-bg-img" />
-          <div className="contact-overlay-info">
-            <h3 className="overlay-heading">Ready to start?</h3>
-            <p className="overlay-text">
-              Have an exciting project, design partnership, or full-time opportunity in mind? Drop a line.
-            </p>
-            <div className="direct-contact-items">
-              <a href="mailto:sunnykumar6207058974@gmail.com" className="direct-link">
-                <span className="direct-icon">✉</span> sunnykumar6207058974@gmail.com
-              </a>
-              <span className="direct-link">
-                <span className="direct-icon">📍</span> San Francisco, California
-              </span>
-            </div>
-          </div>
+          <img src={contactManImg} alt="Contact Sunny Kumar" className="contact-portrait-img" />
         </div>
 
         {/* Right Column: Interactive Form */}
