@@ -24,12 +24,14 @@ export const Testimonials = ({ testimonials = [] }) => {
 
       <div className="feedback-cards-grid">
         {testimonials.map((item) => {
-          const avatarSrc = avatarMap[item.id] || item.avatar;
+          const rawAvatar = item.avatar || '';
+          const avatarSrc = avatarMap[item.id] || (rawAvatar.startsWith('/') ? rawAvatar : `/${rawAvatar}`);
+          const ratingCount = Math.max(0, Math.min(5, Number(item.rating) || 5));
           return (
             <div key={item.id} className="feedback-card">
               <div className="card-top-row">
-                <div className="feedback-stars" aria-label={`${item.rating} out of 5 stars`}>
-                  {'★'.repeat(item.rating)}
+                <div className="feedback-stars" aria-label={`${ratingCount} out of 5 stars`}>
+                  {'★'.repeat(ratingCount)}
                 </div>
                 <div className="quote-mark" aria-hidden="true">“</div>
               </div>

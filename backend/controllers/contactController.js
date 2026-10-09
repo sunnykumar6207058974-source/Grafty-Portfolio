@@ -1,4 +1,6 @@
 import { Contact } from '../models/Contact.js';
+import { sendAdminNotification, sendClientWelcomeEmail } from '../services/emailService.js';
+import { saveContactToFirebase } from '../config/firebase.js';
 
 export const submitContactForm = async (req, res, next) => {
   try {
@@ -19,7 +21,23 @@ export const submitContactForm = async (req, res, next) => {
       });
     }
 
+    // 1. Create in database
     const newContact = Contact.create({ fullName, email, subject, message });
+
+    // 2. Asynchronously save to Firebase (if configured)
+    saveContactToFirebase(newContact).catch((err) => {
+      console.warn('Firebase sync warning:', err.message);
+    });
+
+    // 3. Send Gmail notification to Sunny Kumar's phone
+    sendAdminNotification(newContact).catch((err) => {
+      console.warn('Admin email notification warning:', err.message);
+    });
+
+    // 4. Send automated welcome & thank-you email to the client
+    sendClientWelcomeEmail(newContact).catch((err) => {
+      console.warn('Client welcome email warning:', err.message);
+    });
 
     return res.status(201).json({
       success: true,

@@ -3,7 +3,7 @@ import { db } from '../config/db.js';
 export class Contact {
   static create({ fullName, email, subject, message }) {
     const newContact = {
-      id: `contact-${Date.now()}-${Math.random().toString(36).substr(2, 6)}`,
+      id: `contact-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       fullName: fullName.trim(),
       email: email.trim(),
       subject: subject.trim(),

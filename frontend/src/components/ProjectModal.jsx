@@ -23,9 +23,11 @@ export const ProjectModal = ({ project, onClose }) => {
     <div
       className="modal-backdrop open"
       id="project-modal"
-      aria-hidden="false"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
       onClick={(e) => {
-        if (e.target.classList.contains('modal-backdrop')) onClose();
+        if (e.target.classList.contains('modal-backdrop') && onClose) onClose();
       }}
     >
       <div className="modal-dialog">

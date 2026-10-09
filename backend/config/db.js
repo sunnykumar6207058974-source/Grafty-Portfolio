@@ -167,7 +167,7 @@ export const db = {
       name: "Hugo Boss",
       role: "Creative Director",
       company: "Nordic Studios",
-      avatar: "assets/testimonial-01-hugo.png",
+      avatar: "/assets/testimonial-01-hugo.png",
       rating: 5,
       quote: "Working with this studio elevated our product identity beyond expectations. The attention to typography, micro-interactions, and visual harmony resulted in a 40% jump in brand engagement."
     },
@@ -176,7 +176,7 @@ export const db = {
       name: "Rashed Al-Mansoori",
       role: "VP of Product",
       company: "Apex Tech",
-      avatar: "assets/testimonial-02-rashed.png",
+      avatar: "/assets/testimonial-02-rashed.png",
       rating: 5,
       quote: "Exceptional design sensibility paired with pristine execution. The deliverables were delivered on time, perfectly organized, and praised by our executive leadership and investors."
     },
@@ -185,7 +185,7 @@ export const db = {
       name: "James Wilson",
       role: "Head of Marketing",
       company: "Kinetic Digital",
-      avatar: "assets/testimonial-03-james.png",
+      avatar: "/assets/testimonial-03-james.png",
       rating: 5,
       quote: "The visual transformation of our brand resulted in instant recognition in our industry. Their ability to turn complex design challenges into sleek, conversion-focused UI is unmatched."
     }

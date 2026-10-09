@@ -1,7 +1,12 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { Service } from '../models/Service.js';
 import { Testimonial } from '../models/Testimonial.js';
 import { Faq } from '../models/Faq.js';
 import { db } from '../config/db.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const getServices = async (req, res, next) => {
   try {
@@ -30,12 +35,6 @@ export const getFaqs = async (req, res, next) => {
   }
 };
 
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 export const getProfile = async (req, res, next) => {
   try {
     return res.json({ success: true, data: db.profile });
@@ -47,7 +46,11 @@ export const getProfile = async (req, res, next) => {
 export const downloadCv = async (req, res, next) => {
   try {
     const resumePath = path.join(__dirname, '../data/Sunny_Kumar_Resume.pdf');
-    res.download(resumePath, 'Sunny_Kumar_Resume.pdf');
+    res.download(resumePath, 'Sunny_Kumar_Resume.pdf', (err) => {
+      if (err && !res.headersSent) {
+        next(err);
+      }
+    });
   } catch (err) {
     next(err);
   }

@@ -1,22 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export const LoadingScreen = ({ onFinish }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [shouldRender, setShouldRender] = useState(true);
+  const onFinishRef = useRef(onFinish);
 
   useEffect(() => {
+    onFinishRef.current = onFinish;
+  });
+
+  useEffect(() => {
+    let removeTimer;
     // Keep loading time short, smooth, and professional (~1.1s + 0.5s fade)
     const loadTimer = setTimeout(() => {
       setIsFadingOut(true);
-      const removeTimer = setTimeout(() => {
+      removeTimer = setTimeout(() => {
         setShouldRender(false);
-        if (onFinish) onFinish();
+        if (onFinishRef.current) onFinishRef.current();
       }, 500);
-      return () => clearTimeout(removeTimer);
     }, 1100);
 
-    return () => clearTimeout(loadTimer);
-  }, [onFinish]);
+    return () => {
+      clearTimeout(loadTimer);
+      if (removeTimer) clearTimeout(removeTimer);
+    };
+  }, []);
 
   if (!shouldRender) return null;
 

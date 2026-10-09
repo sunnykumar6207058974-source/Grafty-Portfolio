@@ -167,6 +167,31 @@ npm run build
 
 ---
 
+## 📬 Automated Gmail Notifications & Firebase Integration
+
+When a client submits the contact form requesting website development:
+1. **Gmail Alert on Sunny Kumar's Phone:**
+   - Sends an instant email notification to `sunnykumar6207058974@gmail.com` with:
+     - Client's full name
+     - Client's email address (with 1-click Reply button)
+     - Project subject
+     - Full website requirements & message
+2. **Automated Client Welcome & Thank-You Email:**
+   - Sends a branded confirmation email to the client thanking them for visiting the portfolio and confirming Sunny Kumar will reply within 24 hours.
+3. **Firebase Storage:**
+   - Contact submissions automatically persist in Firebase Firestore when credentials are provided in `backend/.env`.
+
+### Quick Setup for Gmail Push Notifications:
+In `backend/.env`:
+```env
+GMAIL_USER=sunnykumar6207058974@gmail.com
+GMAIL_APP_PASSWORD=your_16_character_gmail_app_password
+ADMIN_EMAIL=sunnykumar6207058974@gmail.com
+```
+*(Generate the 16-character App Password at: [Google Account > Security > App Passwords](https://myaccount.google.com/apppasswords))*
+
+---
+
 ## 🎨 Design Highlights & Customizations
 - **Hero Badge**: Rotated high-contrast badge set to **"Developer"**.
 - **Signature Script**: Transparent neon electric purple (`#7406FF`) handwritten script signature **"Sunny Kumar"** with center arch gap and ambient glow.

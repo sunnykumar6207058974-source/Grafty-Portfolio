@@ -15,5 +15,14 @@ export default defineConfig({
         changeOrigin: true
       }
     }
+  },
+  preview: {
+    port: 5174,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5050',
+        changeOrigin: true
+      }
+    }
   }
 });

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Header } from '../components/Header.jsx';
 import { MobileDrawer } from '../components/MobileDrawer.jsx';
 import { Hero } from '../components/Hero.jsx';
@@ -20,6 +20,14 @@ export const Home = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [toasts, setToasts] = useState([]);
+
+  const handleSelectProject = useCallback((project) => {
+    setSelectedProject(project);
+  }, []);
+
+  const handleCloseProject = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
 
   // Data states fetched from backend API
   const [services, setServices] = useState([]);
@@ -126,7 +134,7 @@ export const Home = () => {
         <Hero />
         <Services services={services} />
         <About onDownloadCv={handleDownloadCv} />
-        <Portfolio projects={projects} onSelectProject={setSelectedProject} />
+        <Portfolio projects={projects} onSelectProject={handleSelectProject} />
         <Testimonials testimonials={testimonials} />
         <Clients />
         <Faq faqs={faqs} />
@@ -139,7 +147,7 @@ export const Home = () => {
       {/* Project Detail Modal */}
       <ProjectModal
         project={selectedProject}
-        onClose={() => setSelectedProject(null)}
+        onClose={handleCloseProject}
       />
     </div>
   );

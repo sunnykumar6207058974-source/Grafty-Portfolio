@@ -45,8 +45,7 @@ export const Contact = ({ onShowToast }) => {
       onShowToast('🎉 Thank you! Your message has been sent successfully.');
     } catch (err) {
       console.error('Contact submit error:', err);
-      onShowToast('🎉 Thank you! Your message has been sent successfully.');
-      setFormData({ fullName: '', email: '', subject: '', message: '' });
+      onShowToast(`❌ ${err.message || 'Failed to send message. Please try again later.'}`);
     } finally {
       setIsSubmitting(false);
     }
