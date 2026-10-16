@@ -1890,6 +1890,7 @@ button {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.85) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
